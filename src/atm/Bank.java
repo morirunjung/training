@@ -5,13 +5,16 @@ import java.util.ArrayList;
 public class Bank {
     private String name;
     private ArrayList<Customer> customers; //ปรับขนาดข้อมูลตามที่เราใส่ข้อมูลไป
-    private DatabaseDataSource dataSource;
-
+//    private DatabaseDataSource dataSource;
+//    private WebServiceDatasource dataSource;
+    private DataSource dataSource;
     // Constructor
-    public Bank(String name) {
+    public Bank(String name,DataSource dataSource) {
         this.name = name;
         //this.customers = new ArrayList<>(); // เขียนเพิ่มเอง
-        this.dataSource = new DatabaseDataSource();
+//        this.dataSource = new DatabaseDataSource();
+//        this.dataSource = new WebServiceDatasource();
+        this.dataSource = dataSource;
         this.customers = dataSource.getCustomerData();
     }
 

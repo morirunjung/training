@@ -9,7 +9,10 @@ public class CustomerMain {
         System.out.println(nancy);
         System.out.println(peter.checkPin("1234"));
 
-        Bank bank = new Bank("My Bank");
+//        Bank bank = new Bank("My Bank");
+        Bank bank = new Bank("MY Bank", new WebServiceDatasource());
+        Bank bankWS = new Bank("MY Bank", new DatabaseDataSource());
+
         bank.addCustomer(peter);
         bank.addCustomer(nancy);
         System.out.println("Bank = "+bank);
@@ -32,5 +35,7 @@ public class CustomerMain {
         System.out.println(peter);
         System.out.println(nancy);
         System.out.println("Print Bank = "+bank);
+        System.out.println("Print bankWS = "+bankWS);
+
     }
 }
