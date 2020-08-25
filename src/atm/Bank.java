@@ -5,11 +5,14 @@ import java.util.ArrayList;
 public class Bank {
     private String name;
     private ArrayList<Customer> customers; //ปรับขนาดข้อมูลตามที่เราใส่ข้อมูลไป
+    private DatabaseDataSource dataSource;
 
     // Constructor
     public Bank(String name) {
         this.name = name;
-        this.customers = new ArrayList<>(); // เขียนเพิ่มเอง
+        //this.customers = new ArrayList<>(); // เขียนเพิ่มเอง
+        this.dataSource = new DatabaseDataSource();
+        this.customers = dataSource.getCustomerData();
     }
 
     // Method

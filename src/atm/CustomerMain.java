@@ -20,7 +20,10 @@ public class CustomerMain {
         System.out.println("C1 = "+c1);
         System.out.println("C80 = "+c80);
 
+        System.out.println("ID 1 "+bank.findCustomer(1));
         System.out.println("ID 2 "+bank.findCustomer(2));
+        System.out.println("ID 100 "+bank.findCustomer(100));
+        System.out.println("ID 200 "+bank.findCustomer(200));
 
         ATM atm = new ATM(bank);
         atm.validateCustomer(1,"1234");
@@ -28,5 +31,6 @@ public class CustomerMain {
         atm.transfer(2,200);
         System.out.println(peter);
         System.out.println(nancy);
+        System.out.println("Print Bank = "+bank);
     }
 }
