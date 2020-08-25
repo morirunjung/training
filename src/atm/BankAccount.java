@@ -57,7 +57,7 @@ public class BankAccount {
         this.type = type;
     }
 
-    public double isBalance() {
+    public double getBalance() {
         return balance;
     }
 

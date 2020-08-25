@@ -17,6 +17,14 @@ public class Customer {
     }
 
 
+    public boolean checkPin(String pin){
+//      if(this.pin.equals(pin))
+//          return true;
+//      else
+//          return false;
+      return this.pin.equals(pin);
+    }
+
     //----------------Getter-------------------------------
 
     public int getId() {
@@ -30,6 +38,8 @@ public class Customer {
     public BankAccount getAccount() {
         return account;
     }
+
+
 
     //-------------------Setter
 
