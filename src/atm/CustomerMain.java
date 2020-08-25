@@ -23,8 +23,10 @@ public class CustomerMain {
         System.out.println("ID 2 "+bank.findCustomer(2));
 
         ATM atm = new ATM(bank);
-        atm.validateCustomer(1,);
+        atm.validateCustomer(1,"1234");
+        atm.deposit(1000);
         atm.transfer(2,200);
-
+        System.out.println(peter);
+        System.out.println(nancy);
     }
 }
